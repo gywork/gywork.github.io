@@ -45,9 +45,21 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
+  
+    
+      
+    
+
+    
   
 
   
@@ -55,7 +67,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -68,7 +80,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hellow," />
+  <meta name="keywords" content="next," />
 
 
 
@@ -102,7 +114,7 @@ More info: Writing
 Run server1$ hexo server
 More info: Server
 Generate static files1$ hexo g">
-<meta property="og:updated_time" content="2016-12-01T14:00:19.000Z">
+<meta property="og:updated_time" content="2016-12-01T14:49:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo">
 <meta name="twitter:description" content="新博客新起点,如果需要了解Hexo相关的知识与操作,可以访问Hexo,当然也可以在GitHub中寻找答案.
@@ -123,8 +135,8 @@ Generate static files1$ hexo g">
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: '6262178932196378000',
-      author: '神'
+      userId: '6358868830034331000',
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -333,6 +345,24 @@ Generate static files1$ hexo g">
           </span>
 
           
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Testing1/" itemprop="url" rel="index">
+                    <span itemprop="name">Testing1</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -397,6 +427,27 @@ Generate static files1$ hexo g">
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欣赏此文？求鼓励，求支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/path/to/wechatpay.png" alt="高洋 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/path/to/alipay.jpg" alt="高洋 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -406,7 +457,7 @@ Generate static files1$ hexo g">
       
         <div class="post-tags">
           
-            <a href="/tags/hellow/" rel="tag"># hellow</a>
+            <a href="/tags/next/" rel="tag"># next</a>
           
         </div>
       
@@ -421,8 +472,8 @@ Generate static files1$ hexo g">
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/01/tagsTest/" rel="prev" title="标签测试文章">
-                标签测试文章 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/01/next-config/" rel="prev" title="next主题配置">
+                next主题配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -514,17 +565,24 @@ Generate static files1$ hexo g">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -587,11 +645,11 @@ Generate static files1$ hexo g">
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://github.com/gywork" title="github_share" target="_blank">github_share</a>
+                  <a href="https://github.com/gywork" title="我的github" target="_blank">我的github</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://songwear.wang/" title="songwear" target="_blank">songwear</a>
+                  <a href="http://songwear.wang/" title="宋伟博客" target="_blank">宋伟博客</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -599,7 +657,7 @@ Generate static files1$ hexo g">
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://theme-next.iissnan.com/" title="next_configure" target="_blank">next_configure</a>
+                  <a href="http://theme-next.iissnan.com/" title="next主题配置" target="_blank">next主题配置</a>
                 </li>
               
             </ul>
