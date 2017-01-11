@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>高洋的小博客</title>
-  <subtitle>学习与分享</subtitle>
+  <title>Zero Poit</title>
+  <subtitle>Learning and sharing</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="gywork.github.io/"/>
-  <updated>2016-12-01T23:42:19.000Z</updated>
+  <updated>2017-01-11T15:56:29.115Z</updated>
   <id>gywork.github.io/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node原理</title>
+    <link href="gywork.github.io/2017/01/10/node%E5%8E%9F%E7%90%86/"/>
+    <id>gywork.github.io/2017/01/10/node原理/</id>
+    <published>2017-01-10T15:27:57.661Z</published>
+    <updated>2017-01-11T15:56:29.115Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="node-原理介绍"><a href="#node-原理介绍" class="headerlink" title="node 原理介绍"></a>node 原理介绍</h1><blockquote>
+<p>任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)<br>node所有代码永远都是在主线程上执行的</p>
+</blockquote>
+<!-- ![node原理图](./event-loop1.jpg) -->
+<p><img src="./images/event-loop.jpg" alt="node原理图"></p>
+<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><ul>
+<li>每个程序运行的时候都需要一些资源</li>
+</ul>
+<p>进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位<br>主要作用: 应用程序与应用程序的边界</p>
+<ul>
+<li><p>计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为了解决这个问题</p>
+</li>
+<li><p>cpu通过时间调度,不同时间片 来处理不同的应用程序(寄存器保存之前程序段的执行状态)(注:不用操作系统不同的调度方式进程执行顺序不同;eg:按时间,按大小,按时间/大小等)</p>
+</li>
+<li><p>每个程序至少有一个进程,而线程数是不确定的,进程中保存着程序资源,线程可以使用进程中的资源</p>
+</li>
+<li>线程可以理解成一段代码流,线程就是操作系统CPU切换处理的最小单位,同一个进程中的线程可以访问所属进程中的数据</li>
+<li>多线程编程模型的弊端<br>1.切换线程也需要时间<br>2.多线程容易发生资源争抢问题(一般传统的解决方案都是利用锁的方式解决)<br>3.高并发能力不太好(线程占用空间)</li>
+</ul>
+<h2 id="node"><a href="#node" class="headerlink" title="node"></a>node</h2><ul>
+<li>node既可以接收http请求也可以进行处理程序</li>
+<li>node并发能力高于apache,稳定性没有apache好,稳定性需要自己进一步处理</li>
+<li>node其实不是单线程的,一般node单线程其实是指JS是单线程的,node作为中间层提供了一些api,如读写文件io等</li>
+<li>普通js在v8引擎中执行,v8引擎是一个单线程执行的模型</li>
+<li>node处理过程<br>1.当请求(request)进来之后,node程序把请求都放在事件队列(evet queue)中,node把普通代码(除了readfile,监听request事件,定时器等)执行完毕,才会处理事件队列中的回调函数(比对js异步执行模型)<br>2.普通代码都是通过 node 主执行线程执行的;<br>直到所有普通代码执行结束了;node 主线程开始开启一个循环(event loop <strong>主线程执行完普通代码继续执行循环</strong>),循环中去不断的提取事件队列中的任务(就是那些异步api),<br>主线程提取到任务之后,node会判断一下,这个任务是否需要进行 IO (文件读写,网络读写 <strong>注意: 只有文件IO ,网络IO, 定时器才会进入到事件队列</strong>),<br>如果是定时器,则在循环线程(主线程)上判断时间到没到,如果到了直接执行,如果没到,再次扔回到事件队列中(定时器执行时千万不要写有大量循环计算的代码,容易造成程序段阻塞)<br>如果是 IO任务 ,主线程会直接在线程池里找一个线程去处理这个任务,当这个线程执行完成之后会把执行结果与错误信息传到回调函数参数中,回调函数会被放入到事件队列中等待循环线程的提取执行,这样就可以通过回调函数处理 IO 结果了;<br>3.循环线程的回调 与 IO 处理线程的回调将会发送给响应(response)或者事件队列目录的任意一个</li>
+</ul>
+<p>另: </p>
+<ol>
+<li>非阻塞 IO 指的是,遇到 IO 操作时,利用线程池去执行等待的操作,主线程继续执行事件队列的代码;</li>
+<li>事件指的是:放在事件队列中在主线程执行的某个阶段会被触发执行的任务</li>
+<li>一定不要再node中写有大量计算的代码,容易造成阻塞</li>
+</ol>
+<h2 id="三大服务器"><a href="#三大服务器" class="headerlink" title="三大服务器:"></a>三大服务器:</h2><h3 id="Apache-IIS-Tomcat-纯粹的服务器-不处理程序-只是会解析http请求报文-交给后台语言进行处理"><a href="#Apache-IIS-Tomcat-纯粹的服务器-不处理程序-只是会解析http请求报文-交给后台语言进行处理" class="headerlink" title="Apache,IIS,Tomcat(纯粹的服务器,不处理程序,只是会解析http请求报文,交给后台语言进行处理)"></a>Apache,IIS,Tomcat(纯粹的服务器,不处理程序,只是会解析http请求报文,交给后台语言进行处理)</h3><ul>
+<li>apache通常和php和java一起使用,apache用来接收http请求,php后台语言用来处理程序</li>
+<li>IIS和ASP.NET等配合使用</li>
+<li>Tomcat服务器配合java,jsp等使用</li>
+</ul>
+<h3 id="传统服务器执行过程"><a href="#传统服务器执行过程" class="headerlink" title="传统服务器执行过程"></a>传统服务器执行过程</h3><ul>
+<li>传统服务器程序(服务器程序也是程序),当请求进来之后就开启一个线程来处理这个请求</li>
+<li>每一个线程至少需要2MB内存空间(以8GB内存为例,同一时刻最多接收4k个请求)</li>
+<li>传统的服务器应对高并发能力不太好(问题)</li>
+<li>同时java,php等后台语言是多线程的(会利用多线程处理需要占用大量cpu时间的代码,如循环等计算就可以新建一个线程去处理)</li>
+<li>多线程语言会通过创建一个新的线程来处理需要大量cpu 事件的代码(需要大量循环计算)<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">new Thread(()=&gt;&#123;</div><div class="line">  // 执行的代码</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;node-原理介绍&quot;&gt;&lt;a href=&quot;#node-原理介绍&quot; class=&quot;headerlink&quot; title=&quot;node 原理介绍&quot;&gt;&lt;/a&gt;node 原理介绍&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;任何程序都没有IO能力,真正的读写文件,操作网络数据的能力
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>测试页面</title>
