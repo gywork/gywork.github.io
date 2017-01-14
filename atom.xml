@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="gywork.github.io/"/>
-  <updated>2017-01-11T19:07:47.820Z</updated>
+  <updated>2017-01-14T15:12:37.726Z</updated>
   <id>gywork.github.io/</id>
   
   <author>
@@ -16,21 +16,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo博客日常指令</title>
+    <link href="gywork.github.io/2017/01/14/hexo%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4/"/>
+    <id>gywork.github.io/2017/01/14/hexo博客日常指令/</id>
+    <published>2017-01-14T14:31:57.000Z</published>
+    <updated>2017-01-14T15:12:37.726Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="新建一篇文章的两种方式"><a href="#新建一篇文章的两种方式" class="headerlink" title="新建一篇文章的两种方式"></a>新建一篇文章的两种方式</h2><ol>
+<li>通过指令创建,在hexo目录命令行下执行 <code>hexo new 文章名</code> 命令,此时会自动在\Hexo\source_posts目录下生成<strong>文章名.md</strong>文件<br><img src="./images/hexo new 文件.jpg" alt="hexo new"><a id="more"></a>
+同时,文件内会自动生成标题,日期等内容<br><img src="./images/内容.jpg" alt="内容"></li>
+<li>也可以自己写好markdown文件,然后将文件直接放在\Hexo\source_posts目录下</li>
+</ol>
+<h2 id="开启本机服务器预览博客内容"><a href="#开启本机服务器预览博客内容" class="headerlink" title="开启本机服务器预览博客内容"></a>开启本机服务器预览博客内容</h2><p>在hexo目录命令行下执行<code>hexo server</code> 或 <code>hexo s</code></p>
+<h2 id="清除之前的数据可文件和public文件"><a href="#清除之前的数据可文件和public文件" class="headerlink" title="清除之前的数据可文件和public文件"></a>清除之前的数据可文件和public文件</h2><p>在hexo目录命令行下执行<code>hexo clean</code> 或 <code>hexo cl</code> </p>
+<h2 id="生成静态文件到public文件夹下"><a href="#生成静态文件到public文件夹下" class="headerlink" title="生成静态文件到public文件夹下"></a>生成静态文件到public文件夹下</h2><p>在hexo目录命令行下执行<code>hexo generate</code> 或 <code>hexo g</code> </p>
+<h2 id="将博客部署到git服务器上"><a href="#将博客部署到git服务器上" class="headerlink" title="将博客部署到git服务器上"></a>将博客部署到git服务器上</h2><p>在hexo目录命令行下执行<code>hexo deploy</code> 或 <code>hexo d</code></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;新建一篇文章的两种方式&quot;&gt;&lt;a href=&quot;#新建一篇文章的两种方式&quot; class=&quot;headerlink&quot; title=&quot;新建一篇文章的两种方式&quot;&gt;&lt;/a&gt;新建一篇文章的两种方式&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;通过指令创建,在hexo目录命令行下执行 &lt;code&gt;hexo new 文章名&lt;/code&gt; 命令,此时会自动在\Hexo\source_posts目录下生成&lt;strong&gt;文章名.md&lt;/strong&gt;文件&lt;br&gt;&lt;img src=&quot;./images/hexo new 文件.jpg&quot; alt=&quot;hexo new&quot;&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js中的Label语法</title>
+    <link href="gywork.github.io/2017/01/14/js%E4%B8%AD%E7%9A%84Label%E8%AF%AD%E6%B3%95/"/>
+    <id>gywork.github.io/2017/01/14/js中的Label语法/</id>
+    <published>2017-01-14T13:41:04.000Z</published>
+    <updated>2017-01-14T15:25:19.985Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="看到一个小问题-测试之后不是很明白-最后才明白这是之前有过了解的javascript中的label语句"><a href="#看到一个小问题-测试之后不是很明白-最后才明白这是之前有过了解的javascript中的label语句" class="headerlink" title="看到一个小问题,测试之后不是很明白,最后才明白这是之前有过了解的javascript中的label语句"></a>看到一个小问题,测试之后不是很明白,最后才明白这是之前有过了解的javascript中的label语句</h2><a id="more"></a>
+<h3 id="下面是测试的代码-其中ddd既不是某个作用域内的变量也不是构造函数的静态成员"><a href="#下面是测试的代码-其中ddd既不是某个作用域内的变量也不是构造函数的静态成员" class="headerlink" title="下面是测试的代码,其中ddd既不是某个作用域内的变量也不是构造函数的静态成员"></a>下面是测试的代码,其中ddd既不是某个作用域内的变量也不是构造函数的静态成员</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">		//1.</div><div class="line">		function fun()&#123;</div><div class="line">			var aaa = &quot;123&quot;;</div><div class="line">			bbb = &quot;456&quot;;</div><div class="line">			console.log(aaa);    //123</div><div class="line">		&#125;</div><div class="line">		fun();</div><div class="line">		console.log(bbb);  //456</div><div class="line"></div><div class="line">		//2.</div><div class="line">		function Fun()&#123;</div><div class="line">			this.ccc =  &quot;789&quot;;</div><div class="line">		&#125;</div><div class="line">		var FF = new Fun();</div><div class="line">		console.log(FF.ccc);   //789</div><div class="line"></div><div class="line">		// 3.</div><div class="line">		function foo()&#123;</div><div class="line">			ddd: &quot;123456789&quot;</div><div class="line">			// console.log(ddd);  //报错  ddd is not defined</div><div class="line">		&#125;</div><div class="line">		foo();</div><div class="line">		console.log(foo.ddd);  //undefined</div><div class="line">		var F = new foo();</div><div class="line">		console.log(F.ddd);  // undefined</div><div class="line">		foo.fff = &quot;111&quot;;</div><div class="line">		console.log(foo.fff)    //111</div><div class="line">	&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="Javascript中的Label语句"><a href="#Javascript中的Label语句" class="headerlink" title="Javascript中的Label语句"></a>Javascript中的Label语句</h2><p>在jsvascript中,熟练的使用Label语句,尤其是在嵌套循环中熟练应用break与continue与Label可以精确返回你想要到程序位置.</p>
+<h3 id="Label语法"><a href="#Label语法" class="headerlink" title="Label语法:"></a>Label语法:</h3><p>Label: statement</p>
+<p>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">begin: for(var i=0; i&lt; 10; i++)&#123;</div><div class="line">	console.log(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="现在通过两个例子的对比来了解Label应用"><a href="#现在通过两个例子的对比来了解Label应用" class="headerlink" title="现在通过两个例子的对比来了解Label应用:"></a>现在通过两个例子的对比来了解Label应用:</h3><h4 id="demo1-未添加Label"><a href="#demo1-未添加Label" class="headerlink" title="demo1(未添加Label)"></a>demo1(未添加Label)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var num = 0;</div><div class="line">   for (var i = 0 ; i &lt; 10 ; i++)&#123;</div><div class="line">        for (var j = 0 ; j &lt; 10 ; j++)&#123;</div><div class="line">             if( i == 5 &amp;&amp; j == 5 )&#123;</div><div class="line">                   break;</div><div class="line">             &#125;</div><div class="line">        num++;</div><div class="line">        &#125;</div><div class="line">   &#125;</div><div class="line">alert(num); // 循环在 i 为5，j 为5的时候跳出 j循环，但会继续执行 i 循环，输出 95</div></pre></td></tr></table></figure>
+<h4 id="demo2-添加Label后"><a href="#demo2-添加Label后" class="headerlink" title="demo2(添加Label后)"></a>demo2(添加Label后)</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var num = 0;</div><div class="line">outPoint:</div><div class="line">for (var i = 0 ; i &lt; 10 ; i++)&#123;</div><div class="line">     for (var j = 0 ; j &lt; 10 ; j++)&#123;</div><div class="line">          if( i == 5 &amp;&amp; j == 5 )&#123;</div><div class="line">                break outPoint;</div><div class="line">          &#125;</div><div class="line">     num++;</div><div class="line">     &#125;</div><div class="line">&#125;</div><div class="line">alert(num); // 循环在 i 为5，j 为5的时候跳出双循环，返回到outPoint层继续执行，输出 55</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;看到一个小问题-测试之后不是很明白-最后才明白这是之前有过了解的javascript中的label语句&quot;&gt;&lt;a href=&quot;#看到一个小问题-测试之后不是很明白-最后才明白这是之前有过了解的javascript中的label语句&quot; class=&quot;headerlink&quot; title=&quot;看到一个小问题,测试之后不是很明白,最后才明白这是之前有过了解的javascript中的label语句&quot;&gt;&lt;/a&gt;看到一个小问题,测试之后不是很明白,最后才明白这是之前有过了解的javascript中的label语句&lt;/h2&gt;
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="gywork.github.io/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>node原理</title>
     <link href="gywork.github.io/2017/01/10/node%E5%8E%9F%E7%90%86/"/>
     <id>gywork.github.io/2017/01/10/node原理/</id>
     <published>2017-01-10T15:27:57.661Z</published>
-    <updated>2017-01-11T19:07:47.820Z</updated>
+    <updated>2017-01-14T15:18:09.155Z</updated>
     
     <content type="html"><![CDATA[<h1 id="node-原理介绍"><a href="#node-原理介绍" class="headerlink" title="node 原理介绍"></a>node 原理介绍</h1><blockquote>
 <p>任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)<br>node所有代码永远都是在主线程上执行的</p>
 </blockquote>
-<!-- ![node原理图](./images/event-loop.jpg) -->
-<p><img src="/images/event-loop.jpg" class="full-image"></p>
 <h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><ul>
 <li>每个程序运行的时候都需要一些资源</li>
 </ul>
 <p>进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位<br>主要作用: 应用程序与应用程序的边界</p>
+<a id="more"></a>
 <ul>
 <li><p>计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为了解决这个问题</p>
 </li>
@@ -48,6 +102,8 @@
 <li>普通js在v8引擎中执行,v8引擎是一个单线程执行的模型</li>
 <li>node处理过程<br>1.当请求(request)进来之后,node程序把请求都放在事件队列(evet queue)中,node把普通代码(除了readfile,监听request事件,定时器等)执行完毕,才会处理事件队列中的回调函数(比对js异步执行模型)<br>2.普通代码都是通过 node 主执行线程执行的;<br>直到所有普通代码执行结束了;node 主线程开始开启一个循环(event loop <strong>主线程执行完普通代码继续执行循环</strong>),循环中去不断的提取事件队列中的任务(就是那些异步api),<br>主线程提取到任务之后,node会判断一下,这个任务是否需要进行 IO (文件读写,网络读写 <strong>注意: 只有文件IO ,网络IO, 定时器才会进入到事件队列</strong>),<br>如果是定时器,则在循环线程(主线程)上判断时间到没到,如果到了直接执行,如果没到,再次扔回到事件队列中(定时器执行时千万不要写有大量循环计算的代码,容易造成程序段阻塞)<br>如果是 IO任务 ,主线程会直接在线程池里找一个线程去处理这个任务,当这个线程执行完成之后会把执行结果与错误信息传到回调函数参数中,回调函数会被放入到事件队列中等待循环线程的提取执行,这样就可以通过回调函数处理 IO 结果了;<br>3.循环线程的回调 与 IO 处理线程的回调将会发送给响应(response)或者事件队列目录的任意一个</li>
 </ul>
+<!-- ![node原理图](./images/event-loop.jpg) -->
+<p><img src="/images/event-loop.jpg" class="full-image"></p>
 <p>另: </p>
 <ol>
 <li>非阻塞 IO 指的是,遇到 IO 操作时,利用线程池去执行等待的操作,主线程继续执行事件队列的代码;</li>
@@ -81,7 +137,12 @@
     <summary type="html">
     
       &lt;h1 id=&quot;node-原理介绍&quot;&gt;&lt;a href=&quot;#node-原理介绍&quot; class=&quot;headerlink&quot; title=&quot;node 原理介绍&quot;&gt;&lt;/a&gt;node 原理介绍&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;任何程序都没有IO能力,真正的读写文件,操作网络数据的能力
+&lt;p&gt;任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)&lt;br&gt;node所有代码永远都是在主线程上执行的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;进程和线程&quot;&gt;&lt;a href=&quot;#进程和线程&quot; class=&quot;headerlink&quot; title=&quot;进程和线程&quot;&gt;&lt;/a&gt;进程和线程&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;每个程序运行的时候都需要一些资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位&lt;br&gt;主要作用: 应用程序与应用程序的边界&lt;/p&gt;
     
     </summary>
     
@@ -89,13 +150,14 @@
   </entry>
   
   <entry>
-    <title>测试页面</title>
+    <title>语法测试页面</title>
     <link href="gywork.github.io/2016/12/02/TEST/"/>
     <id>gywork.github.io/2016/12/02/TEST/</id>
     <published>2016-12-01T16:57:54.833Z</published>
-    <updated>2016-12-01T23:42:19.000Z</updated>
+    <updated>2017-01-14T15:43:01.139Z</updated>
     
     <content type="html"><![CDATA[<h2 id="图片扩大显示测试"><a href="#图片扩大显示测试" class="headerlink" title="图片扩大显示测试"></a>图片扩大显示测试</h2><p><img src="/images/水墨女生.jpg" class="full-image"></p>
+<a id="more"></a>
 <h2 id="背景色测试"><a href="#背景色测试" class="headerlink" title="背景色测试"></a>背景色测试</h2><p><span style="background-color: #9954bb;
 font-size: 12px">MarkDown本身是不支持修改字体,字号,与颜色等功能的;</span></p>
 <p>CSDN-markdown编辑器是其衍生版本，扩展了Markdown的功能（如表格、脚注、内嵌HTML等等）！</p>
@@ -119,7 +181,7 @@ font-size: 12px">MarkDown本身是不支持修改字体,字号,与颜色等功�
     
     <summary type="html">
     
-      &lt;h2 id=&quot;图片扩大显示测试&quot;&gt;&lt;a href=&quot;#图片扩大显示测试&quot; class=&quot;headerlink&quot; title=&quot;图片扩大显示测试&quot;&gt;&lt;/a&gt;图片扩大显示测试&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/水墨女生.jpg&quot; class=&quot;full-image&quot;
+      &lt;h2 id=&quot;图片扩大显示测试&quot;&gt;&lt;a href=&quot;#图片扩大显示测试&quot; class=&quot;headerlink&quot; title=&quot;图片扩大显示测试&quot;&gt;&lt;/a&gt;图片扩大显示测试&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/images/水墨女生.jpg&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
     
     </summary>
     
@@ -147,9 +209,10 @@ font-size: 12px">MarkDown本身是不支持修改字体,字号,与颜色等功�
     <link href="gywork.github.io/2016/12/01/next-config/"/>
     <id>gywork.github.io/2016/12/01/next-config/</id>
     <published>2016-12-01T13:39:21.129Z</published>
-    <updated>2016-12-01T18:48:22.021Z</updated>
+    <updated>2017-01-14T15:44:33.529Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h2><p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
+    <content type="html"><![CDATA[<h2 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h2><a id="more"></a>
+<p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
 <ul>
 <li><strong>false</strong> : 禁用 RSS，不在页面上显示 RSS 连接。</li>
 <li>留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a> 插件。</li>
@@ -157,7 +220,6 @@ font-size: 12px">MarkDown本身是不支持修改字体,字号,与颜色等功�
 </ul>
 <p>具体操作:<br>1.install 安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
 <p>2.Options 选项<br>You can configure this plugin in _config.yml.  你可以在 sourse 路径下_config.yml文件中配置这个插件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 20</div><div class="line">  hub:</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。 底下代码是一篇包含标签的文章的例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 标签测试文章</div><div class="line">tags:</div><div class="line">  - Testing</div><div class="line">  - Another Tag</div><div class="line">---</div></pre></td></tr></table></figure></p>
 <h4 id="测试tag的用法"><a href="#测试tag的用法" class="headerlink" title="测试tag的用法:"></a>测试tag的用法:</h4><p>标签的作用是当你在不同页面添加了标签名,在菜单标签模块点击标签名的时候就可以访问到所有添加了该标签名的页面了.</p>
 <h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><p>新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</p>
@@ -188,14 +250,7 @@ font-size: 12px">主题配置文件</span> 添加：<br><figure class="highlight
     
     <summary type="html">
     
-      &lt;h2 id=&quot;设置-RSS&quot;&gt;&lt;a href=&quot;#设置-RSS&quot; class=&quot;headerlink&quot; title=&quot;设置 RSS&quot;&gt;&lt;/a&gt;设置 RSS&lt;/h2&gt;&lt;p&gt;NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;false&lt;/strong&gt; : 禁用 RSS，不在页面上显示 RSS 连接。&lt;/li&gt;
-&lt;li&gt;留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 &lt;a href=&quot;https://github.com/hexojs/hexo-generator-feed&quot;&gt;hexo-generator-feed&lt;/a&gt; 插件。&lt;/li&gt;
-&lt;li&gt;具体的链接地址 : 适用于已经烧制过 Feed 的情形。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;具体操作:&lt;br&gt;1.install 安装&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install hexo-generator-feed --save&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;2.Options 选项&lt;br&gt;You can configure this plugin in _config.yml.  你可以在 sourse 路径下_config.yml文件中配置这个插件。&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;feed:&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  type: atom&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  path: atom.xml&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  limit: 20&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  hub:&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+      &lt;h2 id=&quot;设置-RSS&quot;&gt;&lt;a href=&quot;#设置-RSS&quot; class=&quot;headerlink&quot; title=&quot;设置 RSS&quot;&gt;&lt;/a&gt;设置 RSS&lt;/h2&gt;
     
     </summary>
     

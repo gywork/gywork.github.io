@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,34 +98,16 @@
 
 
 
-<meta name="description" content="设置 RSSNexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：
-
-false : 禁用 RSS，不在页面上显示 RSS 连接。
-留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。
-具体的链接地址 : 适用于已经烧制过 Feed 的情形。
-
-具体操作:1.install 安装1$">
+<meta name="description" content="设置 RSS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="next主题配置">
 <meta property="og:url" content="gywork.github.io/2016/12/01/next-config/index.html">
 <meta property="og:site_name" content="Zero Poit">
-<meta property="og:description" content="设置 RSSNexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：
-
-false : 禁用 RSS，不在页面上显示 RSS 连接。
-留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。
-具体的链接地址 : 适用于已经烧制过 Feed 的情形。
-
-具体操作:1.install 安装1$">
-<meta property="og:updated_time" content="2016-12-01T18:48:22.021Z">
+<meta property="og:description" content="设置 RSS">
+<meta property="og:updated_time" content="2017-01-14T15:44:33.529Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="next主题配置">
-<meta name="twitter:description" content="设置 RSSNexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：
-
-false : 禁用 RSS，不在页面上显示 RSS 连接。
-留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 hexo-generator-feed 插件。
-具体的链接地址 : 适用于已经烧制过 Feed 的情形。
-
-具体操作:1.install 安装1$">
+<meta name="twitter:description" content="设置 RSS">
 
 
 
@@ -133,7 +115,7 @@ false : 禁用 RSS，不在页面上显示 RSS 连接。
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -157,7 +139,9 @@ false : 禁用 RSS，不在页面上显示 RSS 连接。
 
 
 
-<link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css">
+<!-- <link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css"> -->
+ <link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css">
+
 
 
   <title> next主题配置 | Zero Poit </title>
@@ -562,7 +546,8 @@ false : 禁用 RSS，不在页面上显示 RSS 连接。
       
 
       
-        <h2 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h2><p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
+        <h2 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h2><a id="more"></a>
+<p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
 <ul>
 <li><strong>false</strong> : 禁用 RSS，不在页面上显示 RSS 连接。</li>
 <li>留空 : 使用 Hexo 生成的 Feed 链接。 你可以需要先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="external">hexo-generator-feed</a> 插件。</li>
@@ -570,7 +555,6 @@ false : 禁用 RSS，不在页面上显示 RSS 连接。
 </ul>
 <p>具体操作:<br>1.install 安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-feed --save</div></pre></td></tr></table></figure></p>
 <p>2.Options 选项<br>You can configure this plugin in _config.yml.  你可以在 sourse 路径下_config.yml文件中配置这个插件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 20</div><div class="line">  hub:</div></pre></td></tr></table></figure></p>
-<a id="more"></a>
 <h2 id="添加「标签」页面"><a href="#添加「标签」页面" class="headerlink" title="添加「标签」页面"></a>添加「标签」页面</h2><p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。 底下代码是一篇包含标签的文章的例子：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">title: 标签测试文章</div><div class="line">tags:</div><div class="line">  - Testing</div><div class="line">  - Another Tag</div><div class="line">---</div></pre></td></tr></table></figure></p>
 <h4 id="测试tag的用法"><a href="#测试tag的用法" class="headerlink" title="测试tag的用法:"></a>测试tag的用法:</h4><p>标签的作用是当你在不同页面添加了标签名,在菜单标签模块点击标签名的时候就可以访问到所有添加了该标签名的页面了.</p>
 <h2 id="添加「分类」页面"><a href="#添加「分类」页面" class="headerlink" title="添加「分类」页面"></a>添加「分类」页面</h2><p>新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</p>
@@ -753,7 +737,7 @@ font-size: 12px">主题配置文件</span> 添加：<br><figure class="highlight
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -770,7 +754,7 @@ font-size: 12px">主题配置文件</span> 添加：<br><figure class="highlight
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1039,7 +1023,7 @@ font-size: 12px">主题配置文件</span> 添加：<br><figure class="highlight
 <div class="theme-info">
   当前主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1169,13 +1153,6 @@ font-size: 12px">主题配置文件</span> 添加：<br><figure class="highlight
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>

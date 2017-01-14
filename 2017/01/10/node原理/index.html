@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -101,14 +101,10 @@
 <meta name="description" content="node 原理介绍
 任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)node所有代码永远都是在主线程上执行的
 
-
-
 进程和线程
 每个程序运行的时候都需要一些资源
 
-进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界
-
-计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为">
+进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node原理">
 <meta property="og:url" content="gywork.github.io/2017/01/10/node原理/index.html">
@@ -116,29 +112,21 @@
 <meta property="og:description" content="node 原理介绍
 任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)node所有代码永远都是在主线程上执行的
 
-
-
 进程和线程
 每个程序运行的时候都需要一些资源
 
-进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界
-
-计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为">
+进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界">
 <meta property="og:image" content="gywork.github.io/images/event-loop.jpg">
-<meta property="og:updated_time" content="2017-01-11T19:07:47.820Z">
+<meta property="og:updated_time" content="2017-01-14T15:18:09.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node原理">
 <meta name="twitter:description" content="node 原理介绍
 任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)node所有代码永远都是在主线程上执行的
 
-
-
 进程和线程
 每个程序运行的时候都需要一些资源
 
-进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界
-
-计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为">
+进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位主要作用: 应用程序与应用程序的边界">
 <meta name="twitter:image" content="gywork.github.io/images/event-loop.jpg">
 
 
@@ -147,7 +135,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Mist',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -171,7 +159,9 @@
 
 
 
-<link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css">
+<!-- <link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css"> -->
+ <link href="https://oisha19l0.qnssl.com/eevee.css" rel="stylesheet" type="text/css">
+
 
 
   <title> node原理 | Zero Poit </title>
@@ -561,12 +551,11 @@
         <h1 id="node-原理介绍"><a href="#node-原理介绍" class="headerlink" title="node 原理介绍"></a>node 原理介绍</h1><blockquote>
 <p>任何程序都没有IO能力,真正的读写文件,操作网络数据的能力都是操作系统提供的(操作系统提供一个操作的api)<br>node所有代码永远都是在主线程上执行的</p>
 </blockquote>
-<!-- ![node原理图](./images/event-loop.jpg) -->
-<p><img src="/images/event-loop.jpg" class="full-image"></p>
 <h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><ul>
 <li>每个程序运行的时候都需要一些资源</li>
 </ul>
 <p>进程: 就是是操作系统资源(内存,网络,cpu占有)分配的最小单位<br>主要作用: 应用程序与应用程序的边界</p>
+<a id="more"></a>
 <ul>
 <li><p>计算机发展早期(没有图形界面)时,同一时间只能执行单个程序,进程就是为了解决这个问题</p>
 </li>
@@ -584,6 +573,8 @@
 <li>普通js在v8引擎中执行,v8引擎是一个单线程执行的模型</li>
 <li>node处理过程<br>1.当请求(request)进来之后,node程序把请求都放在事件队列(evet queue)中,node把普通代码(除了readfile,监听request事件,定时器等)执行完毕,才会处理事件队列中的回调函数(比对js异步执行模型)<br>2.普通代码都是通过 node 主执行线程执行的;<br>直到所有普通代码执行结束了;node 主线程开始开启一个循环(event loop <strong>主线程执行完普通代码继续执行循环</strong>),循环中去不断的提取事件队列中的任务(就是那些异步api),<br>主线程提取到任务之后,node会判断一下,这个任务是否需要进行 IO (文件读写,网络读写 <strong>注意: 只有文件IO ,网络IO, 定时器才会进入到事件队列</strong>),<br>如果是定时器,则在循环线程(主线程)上判断时间到没到,如果到了直接执行,如果没到,再次扔回到事件队列中(定时器执行时千万不要写有大量循环计算的代码,容易造成程序段阻塞)<br>如果是 IO任务 ,主线程会直接在线程池里找一个线程去处理这个任务,当这个线程执行完成之后会把执行结果与错误信息传到回调函数参数中,回调函数会被放入到事件队列中等待循环线程的提取执行,这样就可以通过回调函数处理 IO 结果了;<br>3.循环线程的回调 与 IO 处理线程的回调将会发送给响应(response)或者事件队列目录的任意一个</li>
 </ul>
+<!-- ![node原理图](./images/event-loop.jpg) -->
+<p><img src="/images/event-loop.jpg" class="full-image"></p>
 <p>另: </p>
 <ol>
 <li>非阻塞 IO 指的是,遇到 IO 操作时,利用线程池去执行等待的操作,主线程继续执行事件队列的代码;</li>
@@ -659,8 +650,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/02/TEST/" rel="next" title="测试页面">
-                <i class="fa fa-chevron-left"></i> 测试页面
+              <a href="/2016/12/02/TEST/" rel="next" title="语法测试页面">
+                <i class="fa fa-chevron-left"></i> 语法测试页面
               </a>
             
           </div>
@@ -668,6 +659,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/14/js中的Label语法/" rel="prev" title="js中的Label语法">
+                js中的Label语法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -758,7 +753,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -775,7 +770,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1044,7 +1039,7 @@
 <div class="theme-info">
   当前主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Mist
   </a>
 </div>
 
@@ -1174,13 +1169,6 @@
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
