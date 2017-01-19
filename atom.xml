@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="gywork.github.io/"/>
-  <updated>2017-01-14T15:12:37.726Z</updated>
+  <updated>2017-01-19T11:30:51.772Z</updated>
   <id>gywork.github.io/</id>
   
   <author>
@@ -14,6 +14,76 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>多域名.md</title>
+    <link href="gywork.github.io/2017/01/19/%E5%A4%9A%E5%9F%9F%E5%90%8D-md/"/>
+    <id>gywork.github.io/2017/01/19/多域名-md/</id>
+    <published>2017-01-19T11:01:48.000Z</published>
+    <updated>2017-01-19T11:30:51.772Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="绑定域名三步走"><a href="#绑定域名三步走" class="headerlink" title="绑定域名三步走"></a>绑定域名三步走</h2><ol>
+<li>在博客sourse目录CNAME文件中添加域名记录,可以写多个,添加多个时直接在新行添加记录就好了</li>
+<li>为自己想要绑定的域名添加云解析DNS; 设置记录类型为CNAME,主机记录看需求,可配合自定义域名随意设置;@是域名前没有值</li>
+<li>在托管平台pages服务里设置自定义域名</li>
+<li>现在可以访问本站的域名(都不用加www,当然设置www的记录类型很简单,只是自定义域名个数比较紧缺;也不用加协议,浏览器会帮忙0.0)<ul>
+<li><a href="http://tooyoung.win" target="_blank" rel="external">http://tooyoung.win</a></li>
+<li><a href="http://toosimple.win" target="_blank" rel="external">http://toosimple.win</a></li>
+<li><a href="http://tooyoung.toosimple.win" target="_blank" rel="external">http://tooyoung.toosimple.win</a></li>
+<li><a href="http://xiaojuzi.win" target="_blank" rel="external">http://xiaojuzi.win</a></li>
+<li><a href="http://helloword.xyz/" target="_blank" rel="external">http://helloword.xyz</a></li>
+<li><a href="http://gaoyang93.coding.me/gywork" target="_blank" rel="external">http://gaoyang93.coding.me/gywork</a></li>
+<li><a href="gywork.github.io">gywork.github.io</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="多域名"><a href="#多域名" class="headerlink" title="多域名"></a>多域名</h2><p>突发奇想想为博客绑定多个域名,但是发现在github(博客项目-settings-custom demain)上只能绑定一个域名;<br>而且使用显示URL绑定或者隐式url绑定的网站需要网站备案</p>
+<p>经侯毅科普,coding的自定义域名上可以绑定五个域名,所以就将博客项目整体放在了coding上<br><a id="more"></a></p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ol>
+<li><p>网易云万网上CNAME上的主机记录是用来解析域名之前的字符串的,值为@时表示域名之前不加任何字符串,值为www表示域名之前有www,值为其他字符串时表示,www.字符串.域名</p>
+</li>
+<li><p>github 和 coding 都用的是git方式管理代码, 和ssh安全验证(C:\Users\高洋.ssh\id_rsa)<em>SSH需要具体了解</em></p>
+</li>
+<li><p>在网站的配置文件中设置代码部署deploy时,如果是 git@git.coding.net:用户名/项目名.git则会部署到具体项目上(…);</p>
+</li>
+<li>当一个站上上只有一个项目时将项目名写成用户名就可以在访问时省略项目名,用用户名直接访问</li>
+</ol>
+<p>coding账号: tooyoungtoosimple(备用)<br>gaoyang93(博客)</p>
+<h2 id="window下不能直接创建一个点开头的文件-eg-txt-不能被创建"><a href="#window下不能直接创建一个点开头的文件-eg-txt-不能被创建" class="headerlink" title="window下不能直接创建一个点开头的文件,eg: .txt  不能被创建"></a>window下不能直接创建一个点开头的文件,eg: .txt  不能被创建</h2><ul>
+<li>想要创建,只要在后缀的后面再接一个点就可以了,eg:.txt.<ul>
+<li>思考:测试发现在文件后面无论加几个点,在确定后都会消失;</li>
+<li>应该是windows在判断文件名时如果只有一个点那么,点之前必须有字符串作为文件名<br>eg: 123.    保存后的文件名为123</li>
+<li>如果有多个点,那么<em>最后一个后面跟有字符串的点</em>会被当做后缀名来使用;<br>eg: 1.2….3.4.5…..    保存后的文件名为1.2….3.4.5</li>
+<li>如果文件后面有不跟字符串的点将会被忽略<br>eg: 1.txt…..</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;绑定域名三步走&quot;&gt;&lt;a href=&quot;#绑定域名三步走&quot; class=&quot;headerlink&quot; title=&quot;绑定域名三步走&quot;&gt;&lt;/a&gt;绑定域名三步走&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在博客sourse目录CNAME文件中添加域名记录,可以写多个,添加多个时直接在新行添加记录就好了&lt;/li&gt;
+&lt;li&gt;为自己想要绑定的域名添加云解析DNS; 设置记录类型为CNAME,主机记录看需求,可配合自定义域名随意设置;@是域名前没有值&lt;/li&gt;
+&lt;li&gt;在托管平台pages服务里设置自定义域名&lt;/li&gt;
+&lt;li&gt;现在可以访问本站的域名(都不用加www,当然设置www的记录类型很简单,只是自定义域名个数比较紧缺;也不用加协议,浏览器会帮忙0.0)&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://tooyoung.win&quot;&gt;http://tooyoung.win&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://toosimple.win&quot;&gt;http://toosimple.win&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tooyoung.toosimple.win&quot;&gt;http://tooyoung.toosimple.win&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://xiaojuzi.win&quot;&gt;http://xiaojuzi.win&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://helloword.xyz/&quot;&gt;http://helloword.xyz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://gaoyang93.coding.me/gywork&quot;&gt;http://gaoyang93.coding.me/gywork&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;gywork.github.io&quot;&gt;gywork.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;多域名&quot;&gt;&lt;a href=&quot;#多域名&quot; class=&quot;headerlink&quot; title=&quot;多域名&quot;&gt;&lt;/a&gt;多域名&lt;/h2&gt;&lt;p&gt;突发奇想想为博客绑定多个域名,但是发现在github(博客项目-settings-custom demain)上只能绑定一个域名;&lt;br&gt;而且使用显示URL绑定或者隐式url绑定的网站需要网站备案&lt;/p&gt;
+&lt;p&gt;经侯毅科普,coding的自定义域名上可以绑定五个域名,所以就将博客项目整体放在了coding上&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>hexo博客日常指令</title>
