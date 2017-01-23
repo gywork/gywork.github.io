@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="gywork.github.io/"/>
-  <updated>2017-01-19T11:30:51.772Z</updated>
+  <updated>2017-01-23T03:44:40.934Z</updated>
   <id>gywork.github.io/</id>
   
   <author>
@@ -16,11 +16,54 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>多域名.md</title>
+    <title>字体图标</title>
+    <link href="gywork.github.io/2017/01/23/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87/"/>
+    <id>gywork.github.io/2017/01/23/字体图标/</id>
+    <published>2017-01-23T03:37:35.000Z</published>
+    <updated>2017-01-23T03:44:40.934Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="font-Awesome-字体图标"><a href="#font-Awesome-字体图标" class="headerlink" title="font Awesome 字体图标"></a>font Awesome 字体图标</h2><h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h3><blockquote>
+<p><a href="http://www.cnblogs.com/wangfupeng1988/p/4129500.html" target="_blank" rel="external">font Awesome介绍</a><br><a href="http://www.jb51.net/css/70033.html" target="_blank" rel="external">字体图标进阶</a></p>
+</blockquote>
+<p>在网页上添加小图标会使网页内容更加生动灵活;<br>但是用传统的CSS+图片的方式来制作这些icon会要求你很熟练的使用Photoshop且会消耗大量的精力,图片的大小,颜色改变之后还需要重新制作;</p>
+<p>直入主题,font Awesome 为开发者提供了很多的常用icon图标,足以满足日常使用,并且能自己控制大小,颜色;完全开源,免费</p>
+<a id="more"></a>
+<h3 id="2-font-awesome应用"><a href="#2-font-awesome应用" class="headerlink" title="2.font-awesome应用"></a>2.font-awesome应用</h3><h4 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1 下载"></a>2.1 下载</h4><p>去<a href="http://www.thinkcmf.com/" target="_blank" rel="external">http://www.thinkcmf.com/</a>下载，解压之后，应该能看到“css”和“font”两个文件夹。css文件夹中存放着css文档，font文件夹中存放在着适用于不同浏览器的字体文件。其中，css文件夹中可以只保留 font-awesome.min.css 和 font-awesome-ie7.min.css 两个文档，其他的可以删掉。结构应该如下：</p>
+<image src="images/font-awesome.png">
+
+<h4 id="2-2简单应用"><a href="#2-2简单应用" class="headerlink" title="2.2简单应用"></a>2.2简单应用</h4><p>将整理好的文件夹加到你的网站,新建一个页面,将css文件中的两个文件,引入到页面夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;link href=&quot;fontawesome-4.2.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; /&gt;</div><div class="line">&lt;!--[if IE]&gt;</div><div class="line">&lt;link href=&quot;fontawesome-4.2.0/css/font-awesome-ie7.min.css&quot; rel=&quot;stylesheet&quot; /&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
+<p>如果是IE浏览器，需要引入 font-awesome-ie7.min.css ，因为fontAwesome支持IE7+浏览器的。</p>
+<p>引用CSS文件之后，接下来就可以使用图标了。例如，我要在页面中显示一个”链接”/“购物车”的图标，我可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;span&gt;&lt;i class=&quot;fa fa-shopping-car&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div></pre></td></tr></table></figure></p>
+<p>此时就可以在span标签的位置上看到对应的图标了</p>
+<p><a href="gs.com/wangfupeng1988/p/4129500.html">官网的icon页面</a>里有所有的icon的css类,只需要在其中找到对应图标将类名添加到你想要放置图标的位置就可以了（注意，在“fa-link”前面还要加入一个“fa”类，例如 <i class="fa fa-link">）</i></p>
+<h4 id="2-3-设置大小和颜色"><a href="#2-3-设置大小和颜色" class="headerlink" title="2.3 设置大小和颜色"></a>2.3 设置大小和颜色</h4><p>设置颜色和大小非常简单，只要你会用css设置文字的颜色和大小就行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;color:red&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;color:white;background-color:#003399;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div></pre></td></tr></table></figure>
+<h4 id="2-4-其他应用"><a href="#2-4-其他应用" class="headerlink" title="2.4 其他应用"></a>2.4 其他应用</h4><p>fontAwesome还有其他更加复杂一点的应用，包括固定宽度、浮动、反转、旋转、叠加图标等。<br>可以去<a href="http://www.thinkcmf.com/font/examples" target="_blank" rel="external">http://www.thinkcmf.com/font/examples</a>查阅这些应用的例子</p>
+</image>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;font-Awesome-字体图标&quot;&gt;&lt;a href=&quot;#font-Awesome-字体图标&quot; class=&quot;headerlink&quot; title=&quot;font Awesome 字体图标&quot;&gt;&lt;/a&gt;font Awesome 字体图标&lt;/h2&gt;&lt;h3 id=&quot;1-引言&quot;&gt;&lt;a href=&quot;#1-引言&quot; class=&quot;headerlink&quot; title=&quot;1.引言&quot;&gt;&lt;/a&gt;1.引言&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/wangfupeng1988/p/4129500.html&quot;&gt;font Awesome介绍&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.jb51.net/css/70033.html&quot;&gt;字体图标进阶&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在网页上添加小图标会使网页内容更加生动灵活;&lt;br&gt;但是用传统的CSS+图片的方式来制作这些icon会要求你很熟练的使用Photoshop且会消耗大量的精力,图片的大小,颜色改变之后还需要重新制作;&lt;/p&gt;
+&lt;p&gt;直入主题,font Awesome 为开发者提供了很多的常用icon图标,足以满足日常使用,并且能自己控制大小,颜色;完全开源,免费&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="gywork.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端相关" scheme="gywork.github.io/tags/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多域名</title>
     <link href="gywork.github.io/2017/01/19/%E5%A4%9A%E5%9F%9F%E5%90%8D-md/"/>
     <id>gywork.github.io/2017/01/19/多域名-md/</id>
     <published>2017-01-19T11:01:48.000Z</published>
-    <updated>2017-01-19T11:30:51.772Z</updated>
+    <updated>2017-01-23T03:39:20.746Z</updated>
     
     <content type="html"><![CDATA[<h2 id="绑定域名三步走"><a href="#绑定域名三步走" class="headerlink" title="绑定域名三步走"></a>绑定域名三步走</h2><ol>
 <li>在博客sourse目录CNAME文件中添加域名记录,可以写多个,添加多个时直接在新行添加记录就好了</li>
@@ -279,7 +322,7 @@ font-size: 12px">MarkDown本身是不支持修改字体,字号,与颜色等功�
     <link href="gywork.github.io/2016/12/01/next-config/"/>
     <id>gywork.github.io/2016/12/01/next-config/</id>
     <published>2016-12-01T13:39:21.129Z</published>
-    <updated>2017-01-14T15:44:33.529Z</updated>
+    <updated>2017-01-23T03:39:10.304Z</updated>
     
     <content type="html"><![CDATA[<h2 id="设置-RSS"><a href="#设置-RSS" class="headerlink" title="设置 RSS"></a>设置 RSS</h2><a id="more"></a>
 <p>NexT 中 RSS 有三个设置选项，满足特定的使用场景。 更改 主题配置文件，设定 rss 字段的值：</p>
