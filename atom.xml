@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="gywork.github.io/"/>
-  <updated>2017-01-23T03:44:40.934Z</updated>
+  <updated>2017-01-23T03:53:28.551Z</updated>
   <id>gywork.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="gywork.github.io/2017/01/23/%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87/"/>
     <id>gywork.github.io/2017/01/23/字体图标/</id>
     <published>2017-01-23T03:37:35.000Z</published>
-    <updated>2017-01-23T03:44:40.934Z</updated>
+    <updated>2017-01-23T03:53:28.551Z</updated>
     
     <content type="html"><![CDATA[<h2 id="font-Awesome-字体图标"><a href="#font-Awesome-字体图标" class="headerlink" title="font Awesome 字体图标"></a>font Awesome 字体图标</h2><h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1.引言"></a>1.引言</h3><blockquote>
 <p><a href="http://www.cnblogs.com/wangfupeng1988/p/4129500.html" target="_blank" rel="external">font Awesome介绍</a><br><a href="http://www.jb51.net/css/70033.html" target="_blank" rel="external">字体图标进阶</a></p>
@@ -28,9 +28,7 @@
 <p>在网页上添加小图标会使网页内容更加生动灵活;<br>但是用传统的CSS+图片的方式来制作这些icon会要求你很熟练的使用Photoshop且会消耗大量的精力,图片的大小,颜色改变之后还需要重新制作;</p>
 <p>直入主题,font Awesome 为开发者提供了很多的常用icon图标,足以满足日常使用,并且能自己控制大小,颜色;完全开源,免费</p>
 <a id="more"></a>
-<h3 id="2-font-awesome应用"><a href="#2-font-awesome应用" class="headerlink" title="2.font-awesome应用"></a>2.font-awesome应用</h3><h4 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1 下载"></a>2.1 下载</h4><p>去<a href="http://www.thinkcmf.com/" target="_blank" rel="external">http://www.thinkcmf.com/</a>下载，解压之后，应该能看到“css”和“font”两个文件夹。css文件夹中存放着css文档，font文件夹中存放在着适用于不同浏览器的字体文件。其中，css文件夹中可以只保留 font-awesome.min.css 和 font-awesome-ie7.min.css 两个文档，其他的可以删掉。结构应该如下：</p>
-<image src="images/font-awesome.png">
-
+<h3 id="2-font-awesome应用"><a href="#2-font-awesome应用" class="headerlink" title="2.font-awesome应用"></a>2.font-awesome应用</h3><h4 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1 下载"></a>2.1 下载</h4><p>去<a href="http://www.thinkcmf.com/" target="_blank" rel="external">http://www.thinkcmf.com/</a>下载，解压之后，应该能看到“css”和“font”两个文件夹。css文件夹中存放着css文档，font文件夹中存放在着适用于不同浏览器的字体文件。其中，css文件夹中可以只保留 font-awesome.min.css 和 font-awesome-ie7.min.css 两个文档，其他的可以删掉。结构应该如下：<br><img src="/images/font-awesome.png"></p>
 <h4 id="2-2简单应用"><a href="#2-2简单应用" class="headerlink" title="2.2简单应用"></a>2.2简单应用</h4><p>将整理好的文件夹加到你的网站,新建一个页面,将css文件中的两个文件,引入到页面夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;link href=&quot;fontawesome-4.2.0/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot; /&gt;</div><div class="line">&lt;!--[if IE]&gt;</div><div class="line">&lt;link href=&quot;fontawesome-4.2.0/css/font-awesome-ie7.min.css&quot; rel=&quot;stylesheet&quot; /&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure></p>
 <p>如果是IE浏览器，需要引入 font-awesome-ie7.min.css ，因为fontAwesome支持IE7+浏览器的。</p>
 <p>引用CSS文件之后，接下来就可以使用图标了。例如，我要在页面中显示一个”链接”/“购物车”的图标，我可以这么写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;span&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;span&gt;&lt;i class=&quot;fa fa-shopping-car&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div></pre></td></tr></table></figure></p>
@@ -39,7 +37,7 @@
 <h4 id="2-3-设置大小和颜色"><a href="#2-3-设置大小和颜色" class="headerlink" title="2.3 设置大小和颜色"></a>2.3 设置大小和颜色</h4><p>设置颜色和大小非常简单，只要你会用css设置文字的颜色和大小就行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;font-size:12px;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;font-size:20px;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;color:red&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div><div class="line">&lt;br /&gt;</div><div class="line">&lt;span style=&quot;color:white;background-color:#003399;&quot;&gt;&lt;i class=&quot;fa fa-link&quot;&gt;&lt;/i&gt; 链接&lt;/span&gt;</div></pre></td></tr></table></figure>
 <h4 id="2-4-其他应用"><a href="#2-4-其他应用" class="headerlink" title="2.4 其他应用"></a>2.4 其他应用</h4><p>fontAwesome还有其他更加复杂一点的应用，包括固定宽度、浮动、反转、旋转、叠加图标等。<br>可以去<a href="http://www.thinkcmf.com/font/examples" target="_blank" rel="external">http://www.thinkcmf.com/font/examples</a>查阅这些应用的例子</p>
-</image>]]></content>
+]]></content>
     
     <summary type="html">
     
@@ -133,11 +131,13 @@
     <link href="gywork.github.io/2017/01/14/hexo%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%B8%B8%E6%8C%87%E4%BB%A4/"/>
     <id>gywork.github.io/2017/01/14/hexo博客日常指令/</id>
     <published>2017-01-14T14:31:57.000Z</published>
-    <updated>2017-01-14T15:12:37.726Z</updated>
+    <updated>2017-01-23T04:01:04.211Z</updated>
     
     <content type="html"><![CDATA[<h2 id="新建一篇文章的两种方式"><a href="#新建一篇文章的两种方式" class="headerlink" title="新建一篇文章的两种方式"></a>新建一篇文章的两种方式</h2><ol>
-<li>通过指令创建,在hexo目录命令行下执行 <code>hexo new 文章名</code> 命令,此时会自动在\Hexo\source_posts目录下生成<strong>文章名.md</strong>文件<br><img src="./images/hexo new 文件.jpg" alt="hexo new"><a id="more"></a>
-同时,文件内会自动生成标题,日期等内容<br><img src="./images/内容.jpg" alt="内容"></li>
+<li>通过指令创建,在hexo目录命令行下执行 <code>hexo new 文章名</code> 命令,此时会自动在\Hexo\source_posts目录下生成<strong>文章名.md</strong>文件</li>
+</ol>
+<p><img src="/images/hexo new 文件.jpg"><br><a id="more"></a><br>同时,文件内会自动生成标题,日期等内容<br><img src="/images/内容1.jpg" alt="使用md图片语法会有路径问题..."></p>
+<ol>
 <li>也可以自己写好markdown文件,然后将文件直接放在\Hexo\source_posts目录下</li>
 </ol>
 <h2 id="开启本机服务器预览博客内容"><a href="#开启本机服务器预览博客内容" class="headerlink" title="开启本机服务器预览博客内容"></a>开启本机服务器预览博客内容</h2><p>在hexo目录命令行下执行<code>hexo server</code> 或 <code>hexo s</code></p>
@@ -149,7 +149,9 @@
     <summary type="html">
     
       &lt;h2 id=&quot;新建一篇文章的两种方式&quot;&gt;&lt;a href=&quot;#新建一篇文章的两种方式&quot; class=&quot;headerlink&quot; title=&quot;新建一篇文章的两种方式&quot;&gt;&lt;/a&gt;新建一篇文章的两种方式&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;通过指令创建,在hexo目录命令行下执行 &lt;code&gt;hexo new 文章名&lt;/code&gt; 命令,此时会自动在\Hexo\source_posts目录下生成&lt;strong&gt;文章名.md&lt;/strong&gt;文件&lt;br&gt;&lt;img src=&quot;./images/hexo new 文件.jpg&quot; alt=&quot;hexo new&quot;&gt;
+&lt;li&gt;通过指令创建,在hexo目录命令行下执行 &lt;code&gt;hexo new 文章名&lt;/code&gt; 命令,此时会自动在\Hexo\source_posts目录下生成&lt;strong&gt;文章名.md&lt;/strong&gt;文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/images/hexo new 文件.jpg&quot; /&gt;&lt;br&gt;
     
     </summary>
     
